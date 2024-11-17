@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMBS - Online Movie Booking System</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/login.js" defer></script>
+    <script src="js/movie-list.js" defer></script>
+    <script src="js/movie-list-upcoming.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>OMBS</h1>
+        <div class="top-right">
+            <button id="sign-in-btn">Sign In</button>
+            <button id="login-btn">Login</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="movie-list">
+            <div class="search-container">
+                <input type="text" id="search-bar" placeholder="Search movies...">
+            </div>
+
+            <h2 id="recommended-header">Recommended Movies</h2>
+            <div id="movies-container">
+                <!-- Movie items will be displayed here -->
+            </div>
+
+            <h2 id="upcoming-header">Upcoming Movies</h2>
+            <div id="upcoming-movies-container">
+                <!-- Upcoming movies will be displayed here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Sign-In Form Popup -->
+    <div id="signInForm" class="popup">
+        <form id="signInPopupForm">
+            <h3>Sign In</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="sign-in-password" name="password" minlength="6" required>
+            <small>Password must be at least 6 characters long.</small>
+
+            <button type="button">Sign In</button>
+            <button type="button" onclick="closePopup('signInForm')">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Login Form Popup -->
+    <div id="loginForm" class="popup">
+        <form id="loginPopupForm">
+            <h3>Login</h3>
+            <label for="login-name">Name:</label>
+            <input type="text" id="login-name" name="name" required>
+
+            <label for="login-password">Password:</label>
+            <input type="password" id="login-password" name="password" required>
+
+            <button type="button">Login</button>
+            <button type="button" onclick="closePopup('loginForm')">Cancel</button>
+        </form>
+        <div id="login-error" style="display: none; color: red; margin-top: 10px;">Incorrect credentials</div>
+    </div>
+
+    <script>
+    document.getElementById("search-bar").addEventListener("input", function() {
+        const query = this.value;
+        document.getElementById("recommended-header").style.display = query ? "none" : "block";
+        document.getElementById("upcoming-header").style.display = query ? "none" : "block";
+    });
+
+    function closePopup(popupId) {
+        document.getElementById(popupId).style.display = "none";
+    }
+    </script>
+</body>
+</html>

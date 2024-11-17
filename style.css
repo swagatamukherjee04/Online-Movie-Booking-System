@@ -1,0 +1,211 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d0000;
+    margin: 0;
+    color: #030303;
+}
+
+/* Header styling */
+header {
+    background-color: #f6d905; /* Purple */
+    padding: 20px;
+    color: #070707;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.top-right {
+    display: flex;
+    align-items: center;
+}
+
+#search-bar {
+    padding: 8px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+#sign-in-btn {
+    padding: 8px 16px;
+    background-color: #f53d05; /* Violet */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 10px;
+    margin: 10px;
+}
+
+#sign-in-btn:hover {
+    background-color: #8A2BE2; /* Darker Violet */
+}
+
+#login-btn {
+    padding: 8px 16px;
+    background-color: #288503; /* Violet */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 10px;
+    margin: 10px;
+}
+
+#login-btn:hover {
+    background-color: #8A2BE2; /* Darker Violet */
+}
+
+#logout-btn {
+    padding: 8px 16px;
+    background-color: #1e06bb; /* Violet */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 10px;
+    margin: 10px;
+}
+
+#logout-btn:hover {
+    background-color: #8A2BE2; /* Darker Violet */
+}
+
+/* Main content styling */
+main {
+    padding: 20px;
+}
+
+h2 {
+    color: #f95504;
+}
+
+/* Popup styling */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+.popup form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup label,
+.popup input,
+.popup button {
+    margin-bottom: 10px;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.top-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.top-right span {
+    margin-right: 10px;
+}
+
+.welcome-message {
+    color: #131212; /* Choose any color that contrasts with the background */
+    font-weight: bold; /* Optional, to make it stand out more */
+}
+
+/* Center the search bar */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Adds space between search bar and movies */
+}
+
+#search-bar {
+    width: 50%; /* Adjust width as needed */
+    padding: 8px;
+    font-size: 16px;
+}
+
+/* Container for all movies */
+#upcoming-movies-container, #movies-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#upcoming-movies-container p, #movies-container p {
+    font-size: 16px;
+    color: #f70404;
+    text-align: center;
+    width: 100%;  /* Make it span the full container width */
+    margin-top: 20px;
+}
+
+/* Individual movie tile styling */
+.movie-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+
+/* Poster styling */
+.movie-poster {
+    width: 200px;  /* Adjust the width */
+    height: 350px; /* Adjust the height to maintain aspect ratio */
+    object-fit: cover;  /* Ensures the image scales nicely */
+    margin-bottom: 10px; /* Adds some space below the poster */
+}
+
+/* Title styling */
+.movie-title {
+    margin-top: 8px;
+    font-size: 1.1em;
+    color: #333;
+    text-align: center;
+}
+.movie-genre {
+    font-size: 14px;
+    color: #e70909;
+    margin-top: 4px;
+}
+.movie-release-date {
+    font-size: 10px;
+    color: #0d0660;
+    margin-top: 4px;
+}
